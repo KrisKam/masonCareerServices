@@ -1,17 +1,28 @@
-
-
 body, html {
   height: 100%;
 }
-.bg {
-  /* The image used */
+.bgImg {
   background-image: url("../images/chicago.jpg");
-
-  /* Full height */
   height: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bgSolid {
+  background-color: #9fabb7;
+}
+
+div.transparent {
+  margin: 30px; 
+  background-color: #ffffff;
+  border: 1px solid grey;
+  opacity: 0.5;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transparent p {
+  margin: 5%;
+  
+  color: #000000;
 }
