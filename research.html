@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="scripts/app.js"></script>
 </head>
 
 <body class="text-center bgBuckingham">
@@ -30,39 +31,211 @@
     </header>
 
     <main role="main" class="">
-      <h2>Occupations with the most job growth, 2016 and projected 2026</h2>
-      <p>Bureau of Labor Statistics Data</p>
-        <table class="table table-striped bg-light">
-            <thead>
-              <tr>
-                <th scope="col">Job Title</th>
-                <th scope="col">% Growth</th>
-                <th scope="col">2017 Median Salary</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-    </main>
+      <div class="transparent">
+        <h2>Company Search</h2>
+        <form>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industryRadio" id="advertising" value="Advertising%20and%20Agencies">
+                    <label class="form-check-label" for="advertising">
+                        Advertising and Agencies
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industryRadio" id="arts" value="Arts%20and%20Music">
+                    <label class="form-check-label" for="arts">
+                      Arts and Music
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="industryRadio" id="education" value="Education">
+                    <label class="form-check-label" for="education">
+                      Education
+                    </label>
+                  </div>
+                  <input class="form-check-input" type="radio" name="industryRadio" id="finance" value="Finance">
+                  <label class="form-check-label" for="finance">
+                    Finance
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="industryRadio" id="government" value="Government">
+                  <label class="form-check-label" for="government">
+                    Government
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <input class="form-check-input" type="radio" name="industryRadio" id="realEstate" value="Real Estate%20%26%20Construction">
+                  <label class="form-check-label" for="realEstate">
+                    Real Estate &amp; Construction
+                  </label>
+                </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="industryRadio" id="engineering" value="Engineering">
+                      <label class="form-check-label" for="engineering">
+                        Engineering
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="industryRadio" id="food" value="Food">
+                      <label class="form-check-label" for="food">
+                        Food
+                      </label>
+                    </div>
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="industryRadio" id="healthcare" value="Healthcare">
+                      <label class="form-check-label" for="healthcare">
+                        Healthcare
+                      </label>
+                    </div>
+                    <input class="form-check-input" type="radio" name="industryRadio" id="media" value="Media">
+                    <label class="form-check-label" for="media">
+                      Media
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="industryRadio" id="socialGood" value="Social%20Good">
+                    <label class="form-check-label" for="socialGood">
+                      Social Good
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="industryRadio" id="tech" value="Tech">
+                    <label class="form-check-label" for="tech">
+                      Tech
+                    </label>
+                  </div>
+                  </div>
+
+
+              </div>
+
+
+
+
+
+
+
+
+          <h4>Industry:</h4>
+          <div class="row justify-content-md-center">
+            <div class="form-group col-md-4">
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="advertising">
+                <label class="form-check-label" for="advertising">
+                  Advertising
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="education">
+                <label class="form-check-label" for="education">
+                  Education
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="finance">
+                <label class="form-check-label" for="finance">
+                  Finance
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="government">
+                <label class="form-check-label" for="government">
+                  Government
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="insurance">
+                <label class="form-check-label" for="insurance">
+                  Insurance
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="manufacturing">
+                <label class="form-check-label" for="manufacturing">
+                  Manufacturing
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="insurance">
+                <label class="form-check-label" for="insurance">
+                  Insurance
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="insurance">
+                <label class="form-check-label" for="insurance">
+                  Insurance
+                </label>
+              </div>
+
+            </div>
+          </div>
+          <h4>Company Size:</h4>
+          <div class="row justify-content-md-center">
+
+            <div class="col-md-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sizeRadio" id="largeRadio" value="option1">
+                <label class="form-check-label" for="largeRadio">
+                  Large Size
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sizeRadio" id="mediumRadio" value="option2">
+                <label class="form-check-label" for="mediumRadio">
+                  Medium Size
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="sizeRadio" id="smallRadio" value="option3">
+                <label class="form-check-label" for="smallRadio">
+                  Small Size
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary" id="companySubmit">Submit</button>
+        </form>
+
+        <section class="companyInfo justify-content-md-left"></section>
+        <h2 id="companyName">Company Info</h2>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Company Name</th>
+              <th scope="col">Descripton</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mark</td>
+              <td>Otto</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+  </div>
+  </main>
 
   </div>
 
