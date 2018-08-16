@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const industryValue = assignValue(industry);
     const sizeValue = assignValue(companySize);
-    console.log("industry: ", industryValue, "size: ", sizeValue);
 
     if (industryValue === undefined || sizeValue === undefined) {
       const requireSelection = document.querySelector(".errorMessage");

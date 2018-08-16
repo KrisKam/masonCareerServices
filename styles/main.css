@@ -50,6 +50,7 @@ div.transparent {
 
 div.transparentContact {
   margin: 60px; 
+  padding: 10px;
   background-color: rgba(229,229,229,0.8);
 }
 
@@ -62,7 +63,10 @@ div.transparent p {
   color: red;
 }
 
-.aboutMargins {
-  margin-top: 10px;
-  margin-bottom: 10px;
+@media (max-width: 411px) {
+  div.transparentContact {
+    height: 520px;
+    margin: 15px;
+    overflow-y: scroll;
+  }
 }
