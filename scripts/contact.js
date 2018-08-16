@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     clientContact["recruitment"] = recruitment.checked;
     clientContact["consulting"] = consulting.checked;
     clientContact["resume"] = resume.checked;
+    clientContact["cv"] = cv.checked;
     clientContact["coverLetter"] = coverLetter.checked;
     clientContact["interview"] = interview.checked;
     clientContact["coaching"] = coaching.checked;
-    clientContact["resume"] = resume.checked;
     clientContact["other"] = other.checked;
     
     localStorage.setItem('clientContact', JSON.stringify(clientContact));
