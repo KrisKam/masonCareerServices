@@ -1,9 +1,8 @@
 body, html {
-  /* height: 100%; */
+  height: 100%;
 }
 .bgImg {
   background-image: url("../images/chicago.jpg");
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,20 +25,19 @@ body, html {
 }
 .bgStreet {
   background: url("../images/chicagoStreet.jpg");
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
 }
 
-/* .bgStaircase {
+.bgStaircase {
   background-image: url("../images/chicagoStaircase.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
   background-attachment: fixed;
-} */
+}
 
 .bgSolid {
   background-color: #9fabb7;
@@ -52,7 +50,7 @@ div.transparent {
 
 div.transparentContact {
   margin: 60px; 
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(229,229,229,0.8);
 }
 
 div.transparent p {
