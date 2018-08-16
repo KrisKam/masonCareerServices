@@ -61,3 +61,8 @@ div.transparent p {
 .requiredField {
   color: red;
 }
+
+.aboutMargins {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
